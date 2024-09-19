@@ -1,0 +1,36 @@
+<div class="home-container">
+  <section class="service-section intro">
+    <div class="image-side">
+      <img src="assets/temp.png" alt="Intro Image">
+    </div>
+    <div class="text-side">
+      <h2>Welcome to Safe Secure Serene</h2>
+      <p>Your go-to platform for mental wellness and safety services.</p>
+    </div>
+  </section>
+
+  <section class="service-section safety">
+    <div class="image-side">
+      <img src="/assets/temp.png" alt="Safety Image">
+    </div>
+    <div class="text-side">
+      <h2>Safety Services</h2>
+      <p>Find nearby hospitals, police stations, and get emergency tips for your location.</p>
+      <!-- Button to navigate to Safety Service -->
+      <!-- <a routerLink="/safety" class="btn">Explore Safety Services</a> -->
+      <a [routerLink]="['/safety']" class="btn">Explore Safety Services</a>
+    </div>
+  </section>
+
+  <section class="service-section wellness">
+    <div class="image-side">
+      <img src="/assets/temp.png" alt="Wellness Image">
+    </div>
+    <div class="text-side">
+      <h2>Wellness Services</h2>
+      <p>Explore articles and videos on stress management, mental health, and self-care.</p>
+      <!-- Button to navigate to Wellness Service -->
+      <a [routerLink]="['/wellness']" class="btn">Explore Wellness Services</a>
+    </div>
+  </section>
+</div>
