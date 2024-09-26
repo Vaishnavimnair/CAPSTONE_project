@@ -1,0 +1,29 @@
+.map-container {
+    height: 500px; /* Set the height of the map */
+    width: 100%;   /* Make the map responsive to the width of its container */
+  }
+  
+  .search-bar {
+    margin-bottom: 10px; /* Space between the search bar and the map */
+  }
+  
+  input {
+    padding: 8px;           /* Padding for input */
+    font-size: 14px;       /* Font size for input */
+    width: 300px;          /* Width of the input */
+  }
+  
+  button {
+    padding: 8px;          /* Padding for the button */
+    font-size: 14px;       /* Font size for button */
+    margin-left: 10px;     /* Space between input and button */
+    cursor: pointer;        /* Change cursor to pointer on hover */
+  }
+  
+  button:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: white;               /* Change text color on hover */
+    border: none;               /* Remove border on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  

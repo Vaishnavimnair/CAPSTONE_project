@@ -1,1 +1,9 @@
-<p>safety-service works!</p>
+<div class="search-bar">
+    <input [(ngModel)]="searchQuery" placeholder="Enter location" />
+    <button (click)="onSearchSubmit()">Search</button>
+</div>
+
+<!-- Map container -->
+<div #map class="map-container"></div>
+
+
