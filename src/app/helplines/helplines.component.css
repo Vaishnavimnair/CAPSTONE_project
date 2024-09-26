@@ -1,0 +1,63 @@
+/* Apply a pastel background color to the entire page */
+body {
+  background-color: #617b84; /* Light pastel blue */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Container for helplines */
+.helplines-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Space between cards */
+  margin: 0; /* No margin for the container */
+  padding: 20px; /* Optional padding for spacing inside the container */
+}
+
+/* Style for each helpline card */
+.helpline-card {
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #d1e0e0; /* Light grey border with pastel tone */
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(30% - 40px); /* 3 cards per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+/* Hover effect for cards */
+.helpline-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Header style */
+.helpline-card h3 {
+  color: #ff9aa2; /* Pastel pink color */
+  font-size: 1.5em; /* Slightly larger font size */
+  margin-bottom: 10px; /* Spacing below the header */
+}
+
+/* Text style */
+.helpline-card p {
+  color: #555555; /* Soft dark grey for readability */
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Style for links */
+.helpline-card a {
+  color: #a4d65e; /* Pastel green for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.helpline-card a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Optional: Make the text responsive */
+@media (max-width: 600px) {
+  .helpline-card {
+      padding: 10px; /* Less padding on smaller screens */
+      width: calc(100% - 20px); /* Full width on smaller screens */
+  }
+}

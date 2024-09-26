@@ -1,0 +1,136 @@
+/* Button container and styling */
+.button-container {
+    text-align: center;
+    margin-bottom: 30px; /* Space between buttons and articles */
+}
+
+.category-btn {
+    background-color: #b3d9ff; /* Light pastel blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #80b3ff; /* Slightly darker pastel blue */
+}
+
+/* Articles container */
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the articles in the row */
+    gap: 20px; /* Space between article boxes */
+}
+
+/* Each article box */
+.article-box {
+    background-color: #e6f7ff; /* Very light blue */
+    border: 1px solid #99ccff; /* Soft blue border */
+    border-radius: 8px;
+    padding: 15px;
+    width: 260px; /* Set a fixed width for 3 in a row */
+    height: 220px; /* Reduce height to make it smaller */
+    box-shadow: 0 4px 8px rgba(173, 216, 230, 0.3); /* Soft shadow for depth */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-box:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.article-box h3 {
+    color: #333; /* Dark text for contrast */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.article-box p {
+    color: #666; /* Darker gray for better readability */
+    font-size: 12px;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    background-color: #b3d9ff; /* Light pastel blue */
+    color: #000; /* Dark text for contrast */
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    align-self: flex-start;
+}
+
+.read-more-btn:hover {
+    background-color: #80b3ff; /* Slightly darker pastel blue on hover */
+}
+
+/* Responsive layout for medium screens (2 articles per row) */
+@media (max-width: 1024px) {
+    .article-box {
+        width: calc(50% - 30px); /* Adjust width for 2 per row */
+    }
+}
+
+/* Responsive layout for small screens (1 article per row) */
+@media (max-width: 768px) {
+    .article-box {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+/* Modal styles */
+/* Modal styling */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position to overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it overlays above other content */
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: #e6f7ff; /* Very light blue for modal background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the modal */
+    width: 80%; /* Width of the modal */
+    max-width: 600px; /* Maximum width */
+    max-height: 80%; /* Maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 4px 15px rgba(173, 216, 230, 0.3); /* Soft shadow for depth */
+    position: relative; /* Relative positioning for absolute child elements */
+}
+
+/* Close button styling */
+.close {
+    font-size: 2em; /* Increase the size of the close button */
+    color: #007BFF; /* Bright blue color for aesthetic appeal */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: color 0.3s; /* Smooth color transition */
+    position: absolute; /* Positioning the button */
+    top: 10px; /* Adjust the position from the top */
+    right: 15px; /* Adjust the position from the right */
+    z-index: 1001; /* Make sure it sits above other content */
+}
+
+.close:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

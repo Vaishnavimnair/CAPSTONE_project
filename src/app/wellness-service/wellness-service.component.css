@@ -1,0 +1,96 @@
+/* Overall container styling */
+.wellness-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 50px; /* Space between sections */
+}
+
+/* Individual service containers */
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  background-color: #f3f4f6; /* Light background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-description {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.service-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Service titles */
+h2 {
+  color: #6a9fb5;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Service descriptions */
+p {
+  color: #606f7b;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.service-button {
+  padding: 10px 20px;
+  background-color: #a0e7e5;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #73c7c5; /* Darker pastel teal on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-container.reverse {
+    flex-direction: column;
+  }
+
+  .service-description {
+    padding: 10px 0;
+  }
+
+  .service-image img {
+    max-width: 200px;
+  }
+}

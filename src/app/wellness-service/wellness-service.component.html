@@ -1,1 +1,36 @@
-<p>wellness-service works!</p>
+<div class="wellness-section">
+  <!-- Section 1: Articles -->
+  <div class="service-container section-articles">
+    <div class="service-description">
+      <h2>Articles</h2>
+      <p>Explore various articles about wellness and mental health.</p>
+      <button class="service-button" [routerLink]="['/articles']">Go to Articles</button>
+    </div>
+    <div class="service-image">
+      <img src="assets/temp.png" alt="Article Image">
+    </div>
+  </div>
+
+  <!-- Section 2: Helplines -->
+  <div class="service-container section-helplines">
+    <div class="service-image">
+      <img src="assets/temp.png" alt="Helpline Image">
+    </div>
+    <div class="service-description">
+      <h2>Helplines</h2>
+      <p>Find help and support through various wellness helplines.</p>
+      <button class="service-button" [routerLink]="['/helplines']">Go to Helplines</button>
+    </div>
+  </div>
+
+  <!-- Section 3: Surveys -->
+  <div class="service-container section-surveys">
+    <div class="service-description">
+      <h2>Surveys</h2>
+      <p>Participate in wellness surveys to help us improve our services.</p>
+      <button class="service-button" [routerLink]="['/survey']">Take Survey</button>
+    </div>
+    <div class="service-image">
+      <img src="assets/temp.png" alt="Survey Image">
+    </div>
+  </div>

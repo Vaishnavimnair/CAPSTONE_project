@@ -1,0 +1,155 @@
+/* Overall container */
+.survey-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px solid #d4d4f5; /* Light pastel purple */
+  border-radius: 12px;
+  background-color: #f9f6fb; /* Light lavender background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Survey Title */
+h2 {
+  color: #6d7f9b; /* Muted pastel blue */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Question styling */
+h3 {
+  color: #a593e0; /* Soft pastel purple */
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: left; /* Align question title to the left */
+}
+
+/* Flexbox for options */
+.option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Align radio button and label to the left */
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.option label {
+  color: #5a5a89; /* Softer grayish-blue */
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Additional comments textarea */
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1c4e9; /* Light pastel purple border */
+  background-color: #f3e5f5; /* Pastel pink background */
+  color: #6d7f9b;
+  font-size: 14px;
+  resize: none;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Previous and Next button layout */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Previous button */
+button:first-child {
+  background-color: #ffb7b2; /* Soft pastel coral */
+  color: #fff;
+}
+
+/* Next button */
+button:nth-child(2) {
+  background-color: #a0e7e5; /* Light pastel teal */
+  color: #fff;
+}
+
+/* Submit button */
+button:last-child {
+  background-color: #ffcccb; /* Soft pastel pink */
+  color: #fff;
+}
+
+button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Result box styling */
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fce4ec; /* Soft pastel pink background */
+  color: #6d7f9b;
+  border: 2px solid #f8bbd0; /* Slightly darker pastel pink border */
+}
+
+.result-box h3 {
+  font-size: 18px;
+  color: #6d7f9b; /* Same pastel blue for consistency */
+}
+
+/* Center the container on the page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f8e9; /* Light pastel green background for the entire page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Additional styling for the result box to center it */
+.result-box {
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fce4ec; /* Soft pastel pink background */
+  color: #6d7f9b;
+  border: 2px solid #f8bbd0; /* Slightly darker pastel pink border */
+  min-height: 100px; /* Ensure there's enough height for visibility */
+}
+
+/* Center the container on the page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f8e9; /* Light pastel green background for the entire page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+/* Center the survey container */
+.survey-container {
+  display: flex;
+  flex-direction: column; /* Ensure items are stacked vertically */
+  align-items: center; /* Center contents horizontally */
+}
