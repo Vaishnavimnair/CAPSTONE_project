@@ -1,29 +1,67 @@
+/* Overall container for map and weather data */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Map container - 60% of the width */
 .map-container {
-    height: 500px; /* Set the height of the map */
-    width: 100%;   /* Make the map responsive to the width of its container */
-  }
-  
-  .search-bar {
-    margin-bottom: 10px; /* Space between the search bar and the map */
-  }
-  
-  input {
-    padding: 8px;           /* Padding for input */
-    font-size: 14px;       /* Font size for input */
-    width: 300px;          /* Width of the input */
-  }
-  
-  button {
-    padding: 8px;          /* Padding for the button */
-    font-size: 14px;       /* Font size for button */
-    margin-left: 10px;     /* Space between input and button */
-    cursor: pointer;        /* Change cursor to pointer on hover */
-  }
-  
-  button:hover {
-    background-color: #007bff; /* Change background on hover */
-    color: white;               /* Change text color on hover */
-    border: none;               /* Remove border on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
+  height: 500px;
+  width: 60%;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  margin-right: 20px; /* Space between the map and weather data */
+}
+
+/* Weather container - 40% of the width */
+.weather-container {
+  width: 35%;  /* Set a bit smaller width to keep space for margins */
+  padding: 15px;
+  background-color: #e5c0c0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Search bar styles */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+.placeholder-message {
+  width: 35%;
+  padding: 15px;
+  background-color: #eea9dd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the text */
+}

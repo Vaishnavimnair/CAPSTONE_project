@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import * as L from 'leaflet';
 import { OverpassPlace } from '../interfaces/overpass-place';
 import { SafetyService } from '../safety.service';
+//import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-safety-service',
@@ -12,10 +13,12 @@ import { SafetyService } from '../safety.service';
   templateUrl: './safety-service.component.html',
   styleUrl: './safety-service.component.css'
 })
+
 export class SafetyServiceComponent implements AfterViewInit {
   @ViewChild('map') mapContainer!: ElementRef;
   map: L.Map | null = null;
   searchQuery: string = '';
+  weatherData: any = null;  // Add weather data property
 
   ngAfterViewInit(): void {
     this.initializeMap();
@@ -47,6 +50,7 @@ export class SafetyServiceComponent implements AfterViewInit {
           if (this.map) {
             this.map.setView([lat, lon], 13);
             this.addNearbyPlaces(lat, lon);
+            this.getWeather(lat, lon);
           }
         } else {
           console.log('No results found for the given query.');
@@ -72,6 +76,21 @@ export class SafetyServiceComponent implements AfterViewInit {
       })
       .catch(error => {
         console.error('Error fetching nearby places:', error);
+      });
+  }
+   // Function to fetch weather using OpenWeather API
+   getWeather(lat: number, lon: number) {
+    const apiKey = '5d24c79e98b0a49f1d05645f57a36f9c';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    fetch(weatherUrl)
+      .then(response => response.json())
+      .then(data => {
+        this.weatherData = data;  // Store weather data
+        console.log('Weather data:', data);
+      })
+      .catch(error => {
+        console.error('Error fetching weather data:', error);
       });
   }
 
@@ -133,4 +152,5 @@ export class SafetyServiceComponent implements AfterViewInit {
       shadowSize: [41, 41]
     });
   }
+
 }
