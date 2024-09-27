@@ -1,7 +1,11 @@
 export interface OverpassPlace {
-    lat: number; // Latitude
-    lon: number; // Longitude
+    lat: number;
+    lon: number;
     tags: {
-      name?: string; // Optional name property
+      name?: string;
+      amenity?: string;
+      phone?: string;
+      opening_hours?: string;
+      [key: string]: string | undefined;
     };
   }

@@ -14,21 +14,15 @@ import { SafetyService } from '../safety.service';
 })
 export class SafetyServiceComponent implements AfterViewInit {
   @ViewChild('map') mapContainer!: ElementRef;
-  map: any;
+  map: L.Map | null = null;
   searchQuery: string = '';
 
   ngAfterViewInit(): void {
-     // Set the default icon path for Leaflet markers
-     //delete L.Icon.Default.prototype._getIconUrl;
-     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: "/assets/hospital-icon.png", 
-      iconUrl: "/assets/hospital-icon.png",
-      shadowUrl: "/assets/leaflet/images/marker-shadow.png"
-     });
-    // Initialize the map
-    this.map = L.map(this.mapContainer.nativeElement).setView([51.505, -0.09], 13); // Default to London
+    this.initializeMap();
+  }
 
-    // Load the OpenStreetMap tiles
+  initializeMap(): void {
+    this.map = L.map(this.mapContainer.nativeElement).setView([51.505, -0.09], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '© OpenStreetMap'
@@ -42,47 +36,101 @@ export class SafetyServiceComponent implements AfterViewInit {
   }
 
   searchLocation(query: string) {
-    // Use the Nominatim API to get location details from the query
-    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${query}`;
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
 
     fetch(url)
       .then(response => response.json())
       .then(data => {
         if (data.length > 0) {
-          // const lat = data[0].lat;
-          // const lon = data[0].lon;
           const lat = parseFloat(data[0].lat);
           const lon = parseFloat(data[0].lon);
-          this.map.setView([lat, lon], 13);
-          this.addNearbyPlaces(lat, lon);
+          if (this.map) {
+            this.map.setView([lat, lon], 13);
+            this.addNearbyPlaces(lat, lon);
+          }
+        } else {
+          console.log('No results found for the given query.');
         }
+      })
+      .catch(error => {
+        console.error('Error fetching location data:', error);
       });
   }
 
-  addNearbyPlaces(lat: number, lon: number) { // Construct Overpass API URL to fetch nearby hospitals and police stations
+  addNearbyPlaces(lat: number, lon: number) {
     const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];(node["amenity"="hospital"](around:10000,${lat},${lon});node["amenity"="police"](around:10000,${lat},${lon}););out;`;
 
     fetch(overpassUrl)
       .then(response => response.json())
       .then(data => {
-        // Clear existing markers before adding new ones
-        this.map.eachLayer((layer: L.Layer) => {
-          if (layer instanceof L.Marker) {
-            this.map.removeLayer(layer);
+        this.clearExistingMarkers();
+        data.elements.forEach((place: OverpassPlace) => {
+          if (place.lat && place.lon) {
+            this.addMarker(place);
           }
         });
-
-       // Loop through the Overpass API response and add markers
-       data.elements.forEach((place: OverpassPlace) => { // Specify type for place
-        if (place.lat && place.lon) {
-          const name = place.tags.name || 'Unnamed Place'; // Fallback if name is not available
-          L.marker([place.lat, place.lon]).addTo(this.map)
-            .bindPopup(name).openPopup();
-        }
-      });
-    })
+      })
       .catch(error => {
         console.error('Error fetching nearby places:', error);
       });
+  }
+
+  clearExistingMarkers(): void {
+    if (this.map) {
+      this.map.eachLayer((layer: L.Layer) => {
+        if (layer instanceof L.Marker) {
+          this.map?.removeLayer(layer);
+        }
+      });
+    }
+  }
+
+  addMarker(place: OverpassPlace): void {
+    if (!this.map) return;
+
+    const name = place.tags.name || 'Unnamed Place';
+    const amenity = place.tags.amenity || 'unknown';
+    let icon: L.Icon<L.IconOptions>;
+
+    try {
+      icon = this.getCustomIcon(amenity);
+    } catch (error) {
+      console.warn(`Failed to load custom icon for ${amenity}. Using default.`, error);
+      icon = this.getDefaultIcon();
+    }
+
+    const marker = L.marker([place.lat, place.lon], { icon }).addTo(this.map);
+    
+    const popupContent = `
+      <strong>${name}</strong><br>
+      Type: ${amenity}<br>
+      ${place.tags.phone ? `Phone: ${place.tags.phone}<br>` : ''}
+      ${place.tags.opening_hours ? `Hours: ${place.tags.opening_hours}<br>` : ''}
+    `;
+    marker.bindPopup(popupContent);
+  }
+
+  getCustomIcon(amenity: string): L.Icon {
+    const iconUrl = amenity === 'hospital' 
+      ? 'assets/hospital-icon.png' 
+      : 'assets/police-icon.png';
+    return L.icon({
+      iconUrl: iconUrl,
+      iconSize: [16, 16],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32],
+      shadowUrl: 'assets/marker-shadow.png',
+      shadowSize: [10, 10]
+    });
+  }
+  getDefaultIcon(): L.Icon<L.IconOptions> {
+    return L.icon({
+      iconUrl: 'assets/default-icon.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowUrl: 'assets/marker-shadow.png',
+      shadowSize: [41, 41]
+    });
   }
 }
