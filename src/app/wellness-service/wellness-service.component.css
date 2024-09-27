@@ -1,21 +1,21 @@
-/* Overall container styling */
+/* 
 .wellness-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  gap: 50px; /* Space between sections */
+  gap: 50px; 
 }
 
-/* Individual service containers */
+
 .service-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 900px;
-  background-color: #f3f4f6; /* Light background */
+  background-color: #f3f4f6; 
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -44,21 +44,20 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Service titles */
+
 h2 {
   color: #6a9fb5;
   font-size: 26px;
   margin-bottom: 10px;
 }
 
-/* Service descriptions */
 p {
   color: #606f7b;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* Button styling */
+
 .service-button {
   padding: 10px 20px;
   background-color: #a0e7e5;
@@ -72,7 +71,109 @@ p {
 }
 
 .service-button:hover {
-  background-color: #73c7c5; /* Darker pastel teal on hover */
+  background-color: #73c7c5; 
+}
+
+
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-container.reverse {
+    flex-direction: column;
+  }
+
+  .service-description {
+    padding: 10px 0;
+  }
+
+  .service-image img {
+    max-width: 200px;
+  }
+} */
+
+/* Overall container styling */
+.wellness-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 50px; /* Space between sections */
+  background-image: url('/assets/background_home.jpg'); /* Apply background image to the container */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Individual service containers */
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  background-color: white; /* Deep purple background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-description {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #fffcfd; /* Bright pinkish-red text */
+}
+
+.service-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Service titles */
+h2 {
+  color: #D91656; /* Bright pinkish-red title */
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Service descriptions */
+p {
+  color: #000; /* Black text */
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.service-button {
+  padding: 10px 20px;
+  background-color: #640D5F; /* Deep purple button */
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #D91656; /* Bright pinkish-red on hover */
 }
 
 /* Mobile responsiveness */

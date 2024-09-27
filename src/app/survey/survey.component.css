@@ -3,16 +3,16 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
-  border: 2px solid #d4d4f5; /* Light pastel purple */
+  border: 2px solid #640D5F; /* Deep purple */
   border-radius: 12px;
-  background-color: #f9f6fb; /* Light lavender background */
+  background-color: #f3f4f6; /* Light background */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 /* Survey Title */
 h2 {
-  color: #6d7f9b; /* Muted pastel blue */
+  color: #D91656; /* Bright pinkish-red */
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -20,7 +20,7 @@ h2 {
 
 /* Question styling */
 h3 {
-  color: #a593e0; /* Soft pastel purple */
+  color: #640D5F; /* Deep purple */
   font-size: 18px;
   margin-bottom: 15px;
   text-align: left; /* Align question title to the left */
@@ -39,7 +39,7 @@ h3 {
 }
 
 .option label {
-  color: #5a5a89; /* Softer grayish-blue */
+  color: #000; /* Black text */
   font-size: 16px;
   text-align: left;
 }
@@ -49,9 +49,9 @@ textarea {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #d1c4e9; /* Light pastel purple border */
-  background-color: #f3e5f5; /* Pastel pink background */
-  color: #6d7f9b;
+  border: 1px solid #640D5F; /* Deep purple border */
+  background-color: #f3f4f6; /* Light background */
+  color: #D91656;
   font-size: 14px;
   resize: none;
 }
@@ -76,19 +76,19 @@ button {
 
 /* Previous button */
 button:first-child {
-  background-color: #ffb7b2; /* Soft pastel coral */
+  background-color: #D91656; /* Bright pinkish-red */
   color: #fff;
 }
 
 /* Next button */
 button:nth-child(2) {
-  background-color: #a0e7e5; /* Light pastel teal */
+  background-color: #640D5F; /* Deep purple */
   color: #fff;
 }
 
 /* Submit button */
 button:last-child {
-  background-color: #ffcccb; /* Soft pastel pink */
+  background-color: #D91656; /* Bright pinkish-red */
   color: #fff;
 }
 
@@ -101,20 +101,22 @@ button:hover {
   margin-top: 20px;
   padding: 20px;
   border-radius: 12px;
-  background-color: #fce4ec; /* Soft pastel pink background */
-  color: #6d7f9b;
-  border: 2px solid #f8bbd0; /* Slightly darker pastel pink border */
+  background-color: #f3f4f6; /* Light background */
+  color: #D91656;
+  border: 2px solid #640D5F; /* Deep purple border */
 }
 
 .result-box h3 {
   font-size: 18px;
-  color: #6d7f9b; /* Same pastel blue for consistency */
+  color: #D91656; /* Bright pinkish-red */
 }
 
 /* Center the container on the page */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f1f8e9; /* Light pastel green background for the entire page */
+  background-image: url('/assets/background_home.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,16 +132,18 @@ body {
   margin-top: 20px;
   padding: 20px;
   border-radius: 12px;
-  background-color: #fce4ec; /* Soft pastel pink background */
-  color: #6d7f9b;
-  border: 2px solid #f8bbd0; /* Slightly darker pastel pink border */
+  background-color: #f3f4f6; /* Light background */
+  color: #D91656;
+  border: 2px solid #640D5F; /* Deep purple border */
   min-height: 100px; /* Ensure there's enough height for visibility */
 }
 
 /* Center the container on the page */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f1f8e9; /* Light pastel green background for the entire page */
+  background-image: url('/assets/background_home.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,9 +151,17 @@ body {
   margin: 0;
 }
 
-/* Center the survey container */
-.survey-container {
-  display: flex;
-  flex-direction: column; /* Ensure items are stacked vertically */
-  align-items: center; /* Center contents horizontally */
+
+
+.container {
+  background-image: url('/assets/background_home.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  width: 100%; /* Set the width to 100% */
+  display: flex; /* Display as flex */
+  flex-direction: column; /* Flex direction column */
+  align-items: center; /* Align items center */
+  justify-content: center; /* Justify content center */
+  padding-top: 50px; /* Add some padding to the top */
+  min-height: 100vh; /* Set a minimum height to 100vh */
 }

@@ -3,7 +3,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #FFD7C4;
     border-radius: 10px;
   }
   
@@ -40,8 +40,8 @@
   }
   
   .contact-section {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #8C3061;
+    color: #FFD7C4;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -65,3 +65,15 @@
     font-weight: bold;
     margin-bottom: 40px;
   }  
+
+  .container {
+    background-image: url('/assets/background_home.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    width: 100%; /* Set the width to 100% */
+    display: flex; /* Display as flex */
+    flex-direction: column; /* Flex direction column */
+    align-items: center; /* Align items center */
+    justify-content: center; /* Justify content center */
+    padding-top: 50px; /* Add some padding to the top */
+}

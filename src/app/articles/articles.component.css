@@ -5,7 +5,7 @@
 }
 
 .category-btn {
-    background-color: #b3d9ff; /* Light pastel blue */
+    background-color: #640D5F; /* Deep purple */
     color: white;
     border: none;
     border-radius: 8px;
@@ -17,7 +17,7 @@
 }
 
 .category-btn:hover {
-    background-color: #80b3ff; /* Slightly darker pastel blue */
+    background-color: #D91656; /* Bright pinkish-red */
 }
 
 /* Articles container */
@@ -30,8 +30,8 @@
 
 /* Each article box */
 .article-box {
-    background-color: #e6f7ff; /* Very light blue */
-    border: 1px solid #99ccff; /* Soft blue border */
+    background-color: #f3f4f6; /* Light background */
+    border: 1px solid #640D5F; /* Deep purple border */
     border-radius: 8px;
     padding: 15px;
     width: 260px; /* Set a fixed width for 3 in a row */
@@ -48,21 +48,21 @@
 }
 
 .article-box h3 {
-    color: #333; /* Dark text for contrast */
+    color: #D91656; /* Bright pinkish-red title */
     font-size: 16px;
     margin-bottom: 5px;
 }
 
 .article-box p {
-    color: #666; /* Darker gray for better readability */
+    color: #000; /* Black text */
     font-size: 12px;
     line-height: 1.4;
     overflow: hidden;
 }
 
 .read-more-btn {
-    background-color: #b3d9ff; /* Light pastel blue */
-    color: #000; /* Dark text for contrast */
+    background-color: #640D5F; /* Deep purple */
+    color: #fffcfd; /* Bright pinkish-red text */
     padding: 5px 10px;
     text-align: center;
     border-radius: 15px;
@@ -73,7 +73,7 @@
 }
 
 .read-more-btn:hover {
-    background-color: #80b3ff; /* Slightly darker pastel blue on hover */
+    background-color: #D91656; /* Bright pinkish-red on hover */
 }
 
 /* Responsive layout for medium screens (2 articles per row) */
@@ -108,7 +108,7 @@
 
 /* Modal content styling */
 .modal-content {
-    background-color: #e6f7ff; /* Very light blue for modal background */
+    background-color: #f3f4f6; /* Light background for modal */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside the modal */
     width: 80%; /* Width of the modal */
@@ -122,7 +122,7 @@
 /* Close button styling */
 .close {
     font-size: 2em; /* Increase the size of the close button */
-    color: #007BFF; /* Bright blue color for aesthetic appeal */
+    color: #D91656; /* Bright pinkish-red color for aesthetic appeal */
     cursor: pointer; /* Change cursor to pointer */
     transition: color 0.3s; /* Smooth color transition */
     position: absolute; /* Positioning the button */
@@ -132,5 +132,20 @@
 }
 
 .close:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #640D5F; /* Deep purple on hover */
+}
+
+/* Add background image */
+/* Add background image */
+/* Add background image */
+.container {
+    background-image: url('/assets/background_home.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    width: 100%; /* Set the width to 100% */
+    display: flex; /* Display as flex */
+    flex-direction: column; /* Flex direction column */
+    align-items: center; /* Align items center */
+    justify-content: center; /* Justify content center */
+    padding-top: 50px; /* Add some padding to the top */
 }

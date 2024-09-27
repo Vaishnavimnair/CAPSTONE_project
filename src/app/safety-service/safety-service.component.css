@@ -1,31 +1,15 @@
-/* Overall container for map and weather data */
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/* Map container - 60% of the width */
-.map-container {
-  height: 500px;
-  width: 60%;
-  border: 3px solid #ddd;
-  border-radius: 10px;
-  margin-right: 20px; /* Space between the map and weather data */
-}
-
-/* Weather container - 40% of the width */
-.weather-container {
-  width: 35%;  /* Set a bit smaller width to keep space for margins */
-  padding: 15px;
-  background-color: #e5c0c0;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Overall container */
+.container {
+  background-image: url('/assets/background_home.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  width: 100%; /* Set the width to 100% */
+  display: flex; /* Display as flex */
+  flex-direction: column; /* Flex direction column */
+  align-items: center; /* Align items center */
+  justify-content: center; /* Justify content center */
+  padding-top: 50px; /* Add some padding to the top */
+  min-height: 100vh; /* Set a minimum height to 100vh */
 }
 
 /* Search bar styles */
@@ -52,15 +36,47 @@ button {
 }
 
 button:hover {
-  background-color: #007bff;
+  background-color: #8C3061;
   color: white;
   border: none;
   transition: background-color 0.3s;
 }
+
+/* Overall container for map and weather data */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 80%; /* Set a width to make it more responsive */
+}
+
+/* Map container - 60% of the width */
+.map-container {
+  height: 500px;
+  width: 60%;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  margin-right: 20px; /* Space between the map and weather data */
+}
+
+/* Weather container - 40% of the width */
+.weather-container {
+  width: 35%; /* Set a bit smaller width to keep space for margins */
+  padding: 15px;
+  background-color: #e5c0c0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .placeholder-message {
   width: 35%;
   padding: 15px;
-  background-color: #eea9dd;
+  background-color: #FFD7C4;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center; /* Center align the text */
