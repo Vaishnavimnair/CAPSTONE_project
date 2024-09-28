@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+    background-image: url('/assets/background_home.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px; /* Reduce the height of the container */
+    max-width: 400px; /* Reduce the width of the container */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFD7C4; /* Light orange background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Align the container in the center */
+}
+
+.login-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.remember-forgot {
+    margin-bottom: 10px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #640D5F; /* Deep purple background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: #D91656; /* Bright pinkish-red background on hover */
+}

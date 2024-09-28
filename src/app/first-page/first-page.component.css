@@ -1,0 +1,74 @@
+.container {
+  background-image: url('/assets/background_home.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  width: 100%; /* Set the width to 100% */
+  height: 100vh; /* Set the height to 100vh */
+  display: flex; /* Display as flex */
+  flex-direction: column; /* Flex direction column */
+  align-items: center; /* Align items center */
+  justify-content: center; /* Justify content center */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.title {
+  font-size: 36px; /* Font size */
+  font-weight: bold; /* Font weight */
+  color: #2c3e50; /* Dark blue color */
+  margin-bottom: 20px; /* Margin bottom */
+  align-items: center;
+}
+
+.popup {
+  position: absolute;
+  background-color: #FFD7C4; /* Light orange background */
+  border: 1px solid #640D5F; /* Deep purple border */
+  padding: 20px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Rounded corners */
+  height: 6rem;
+  width: 20rem;
+  align-items: centre;
+}
+
+.popup h2 {
+  align-items: center;
+  margin: 0 0 10px;
+  color: #2c3e50; /* Dark blue color */
+  font-size: 24px; /* Larger font size */
+  align-items: center;
+}
+
+.get-started-button {
+  background-color: #640D5F; /* Deep purple background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.get-started-button:hover {
+  background-color: #D91656; /* Bright pinkish-red background on hover */
+}
+
+.popup-button {
+  background-color: #640D5F; /* Deep purple background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin: 10px; /* Margin */
+  align-items: center;
+}
+
+.popup-button:hover {
+  background-color: #D91656; /* Bright pinkish-red background on hover */
+}

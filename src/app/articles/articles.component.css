@@ -135,9 +135,6 @@
     color: #640D5F; /* Deep purple on hover */
 }
 
-/* Add background image */
-/* Add background image */
-/* Add background image */
 .container {
     background-image: url('/assets/background_home.jpg'); /* Add background image */
     background-size: cover; /* Cover the entire background */
@@ -148,4 +145,7 @@
     align-items: center; /* Align items center */
     justify-content: center; /* Justify content center */
     padding-top: 50px; /* Add some padding to the top */
-}
+    min-height: 100vh; /* Set a minimum height to 100vh */
+  }
+  
+

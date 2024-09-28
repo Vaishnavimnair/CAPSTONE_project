@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="login-form">
+        <h2>Create an Account</h2>
+
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" formControlName="firstName" placeholder="First Name" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" formControlName="lastName" placeholder="Last Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" placeholder="example.email@gmail.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" placeholder="Enter at least 8+ characters" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" formControlName="phone" placeholder="Phone Number" required>
+
+            <label for="role">Role</label>
+            <select id="role" formControlName="role" required>
+                <option value="USER">USER</option>
+            </select>
+
+            <div class="remember-forgot">
+                <a routerLink='/login'>Already a User?</a>
+            </div>
+
+            <button type="submit" class="signin-btn">Create Account</button>
+        </form>
+    </div>
+</div>

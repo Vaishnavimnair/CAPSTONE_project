@@ -53,11 +53,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SurveyService } from '../survey.service'; // Import the service
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-survey',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, NavbarComponent],
   templateUrl: './survey.component.html',
   styleUrls: ['./survey.component.css'],
 })

@@ -5,11 +5,12 @@ import * as L from 'leaflet';
 import { OverpassPlace } from '../interfaces/overpass-place';
 import { SafetyService } from '../safety.service';
 //import { WeatherService } from '../weather.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-safety-service',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule, NavbarComponent],
   templateUrl: './safety-service.component.html',
   styleUrl: './safety-service.component.css'
 })

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HelplineService } from '../helplines.service';
 import { CommonModule } from '@angular/common'; // Ensure this import is present
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-helplines',
   standalone: true,
   templateUrl: './helplines.component.html',
   styleUrls: ['./helplines.component.css'],
-  imports: [CommonModule], // Include CommonModule here
+  imports: [CommonModule, NavbarComponent], // Include CommonModule here
 })
 export class HelplinesComponent implements OnInit {
   helplines: any[] = []; // Initialize the array to hold helpline data

@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="login-box">
+        <div class="login-form">
+            <h2>Sign in</h2>
+
+            <!-- Bind the form to the FormGroup -->
+            <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+                <label for="signin-email">Email</label>
+                <!-- Use formControlName to bind the input to the form control -->
+                <input type="email" id="signin-email" formControlName="email" placeholder="example.email@gmail.com" required>
+
+                <label for="signin-password">Password</label>
+                <!-- Use formControlName to bind the input to the form control -->
+                <input type="password" id="signin-password" formControlName="password" placeholder="Enter at least 8+ characters" required>
+
+                <div class="remember-forgot">
+                    <a routerLink="/signup">Don't have an Account?</a>
+                </div>
+
+                <button type="submit" class="signin-btn">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>
